@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1100/eureka/
+    registry-fetch-interval-seconds: 5 #隔多长时间去拉取服务的注册状态
+
+spring:
+  application:
+    name: publish-server
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #这个超时时间设置多长啊，我也不是很懂
+    timeout: 10000
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
