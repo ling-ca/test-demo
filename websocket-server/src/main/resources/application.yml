@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+websocket:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1100/eureka/
+
+spring:
+  application:
+    name: websocket-server
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #这个超时时间设置多长啊，我也不是很懂
+    timeout: 10000
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+
